@@ -49,4 +49,6 @@ const Parent = React.createElement(
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(Parent);
+console.log(root);
+
+root.render(<h1>Hello Man</h1>);
