@@ -75,6 +75,10 @@
   display: flex;
   background-color: rgb(176, 166, 106);
   width: 50px;
+  padding: 2px;
+}
+.starImage {
+  margin-right: 2px;
 }
 .cuisines {
   margin-top: 10px;

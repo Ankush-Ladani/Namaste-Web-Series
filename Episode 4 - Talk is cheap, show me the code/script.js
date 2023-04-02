@@ -1,6 +1,8 @@
 const React = require("react");
 const ReactDOM = require("react-dom");
 
+import Logo from "./Assets/website-logo.png";
+
 const data = [
   {
     type: "restaurant",
@@ -115,11 +117,7 @@ const Header = () => {
   return (
     <div className="header">
       <div>
-        <img
-          src="https://o.remove.bg/downloads/d0e68774-210b-441a-ab2e-a0c9acd05cee/images-removebg-preview.png"
-          alt="website-logo"
-          width="100px"
-        />
+        <img src={Logo} alt="website-logo" width="100px" />
       </div>
       <div className="navItems">
         <ul>
@@ -153,9 +151,10 @@ const RestaurantCard = ({
       <div className="detaisDiv">
         <span className="ratingDiv">
           <img
-            src="https://o.remove.bg/downloads/f9aa602e-07c7-4797-bb04-6dcdd036a7ed/download-removebg-preview.png"
-            alt=""
+            src="https://cdn-icons-png.flaticon.com/512/2107/2107957.png"
+            alt="star"
             width="20px"
+            className="starImage"
           />
           {avgRating}
         </span>
