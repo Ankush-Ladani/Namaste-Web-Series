@@ -1,0 +1,104 @@
+* {
+  font-family: "Roboto Slab", serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER STYLING */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid gray;
+  box-shadow: 10px 3px 5px rgb(128, 128, 128);
+}
+
+.header > div > img {
+  margin: 10px 0;
+  margin-left: 1rem;
+}
+
+.navItems > ul {
+  list-style: none;
+  display: flex;
+  margin-right: 4rem;
+}
+.navItems > ul > li {
+  padding-right: 20px;
+  font-size: 1.2rem;
+}
+.navItems > ul > li:hover {
+  cursor: pointer;
+}
+
+/* BODY STYLING */
+
+.body {
+  margin-top: 2rem;
+  margin-left: 3rem;
+}
+
+.inputBox {
+  padding: 7px 14px;
+  border-radius: 7px 0px 0px 7px;
+}
+.inputBox::placeholder {
+  font-size: 0.9rem;
+}
+.searchBtn {
+  padding: 7px 14px;
+  border-radius: 0px 7px 7px 0px;
+  border-width: 2px 2px 2px 0px;
+}
+.searchBtn:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.filterBtn {
+  background-color: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* RESTAURANT CONTAINER */
+
+.restaurantContainer {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+.restaurantCard {
+  /* background-color: rgb(104, 147, 255); */
+  width: 300px;
+  margin-right: 4rem;
+  margin-bottom: 2rem;
+}
+.restaurantCard:hover {
+  cursor: pointer;
+}
+.foodImage {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.ratingDiv {
+  display: flex;
+  background-color: rgb(176, 166, 106);
+  width: 50px;
+  padding: 2px;
+}
+.starImage {
+  margin-right: 2px;
+}
+.cuisines {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 80%;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.detaisDiv {
+  display: flex;
+  justify-content: space-between;
+}
