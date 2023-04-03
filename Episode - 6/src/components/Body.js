@@ -41,29 +41,24 @@ const Body = () => {
           type="text"
           placeholder="Search Food Item"
         />
-        <button
-          onClick={() => handleSearch(searchValue.toLowerCase())}
-          className="searchBtn">
-          Search
+        <button className="filterBtn" onClick={filterRestaurants}>
+          FILTER BASED ON RATING
         </button>
       </div>
-      <button className="filterBtn" onClick={filterRestaurants}>
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/57/57164.png"
-          alt="filterIcon"
-          width="20px"
-        />
-      </button>
       <div className="restaurantContainer">
         {restaurantList.length != 0 &&
-          restaurantList.map((restaurant) => {
-            return (
-              <RestaurantCard
-                key={restaurant?.data?.id}
-                restaurant={restaurant}
-              />
-            );
-          })}
+          restaurantList
+            .filter((rest) =>
+              rest.data.name.toLowerCase().includes(searchValue.toLowerCase())
+            )
+            .map((restaurant) => {
+              return (
+                <RestaurantCard
+                  key={restaurant?.data?.id}
+                  restaurant={restaurant}
+                />
+              );
+            })}
       </div>
     </div>
   );

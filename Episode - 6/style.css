@@ -41,7 +41,7 @@
 
 .inputBox {
   padding: 7px 14px;
-  border-radius: 7px 0px 0px 7px;
+  border-radius: 7px;
 }
 .inputBox::placeholder {
   font-size: 0.9rem;
@@ -59,7 +59,8 @@
 .filterBtn {
   background-color: none;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 0px 20px;
+  padding: 3px;
 }
 
 /* RESTAURANT CONTAINER */
