@@ -27,7 +27,7 @@ const RestaurantCard = (restaurant) => {
           />
           {avgRating}
         </span>
-        <p>{deliveryTime}</p>
+        <p>{deliveryTime} MINS</p>
         <p>{costForTwoString}</p>
       </div>
     </div>

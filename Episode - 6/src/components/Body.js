@@ -1,6 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import { FETCH_URL } from "../utils/const";
 import { useState, useEffect } from "react";
+import Shimmer from "./Shimmer";
 const Body = () => {
   // console.log(restaurantList);
   const [restaurantList, setRestaurantList] = useState([]);
@@ -46,6 +47,24 @@ const Body = () => {
         </button>
       </div>
       <div className="restaurantContainer">
+        {restaurantList.length == 0 && (
+          <>
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+            <Shimmer />
+          </>
+        )}
         {restaurantList.length != 0 &&
           restaurantList
             .filter((rest) =>
