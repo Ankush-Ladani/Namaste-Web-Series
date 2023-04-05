@@ -7,6 +7,27 @@ import { data } from "../utils/data.js";
 const App = () => {
   const [type, setType] = useState("");
 
+  const [style, setStyle] = useState({
+    mob: false,
+    lap: false,
+    shi: false,
+  });
+
+  const handleMobile = () => {
+    setType("mobile");
+    setStyle({ lap: false, shi: false, mob: true });
+  };
+
+  const handleLaptop = () => {
+    setType("laptop");
+    setStyle({ mob: false, shi: false, lap: true });
+  };
+
+  const handleShirt = () => {
+    setType("shirt");
+    setStyle({ mob: false, shi: true, lap: false });
+  };
+
   return (
     <div style={{ margin: "20px 20vw" }}>
       <div
@@ -16,13 +37,22 @@ const App = () => {
           background: "black",
           width: "50vw",
         }}>
-        <button onClick={() => setType("mobile")} className="box box1">
+        <button
+          style={{ boxShadow: style.mob && "0px 3px 5px yellow" }}
+          onClick={handleMobile}
+          className="box box1">
           Mobiles
         </button>
-        <button onClick={() => setType("laptop")} className="box box1">
+        <button
+          style={{ boxShadow: style.lap && "0px 3px 5px yellow" }}
+          onClick={handleLaptop}
+          className="box box1">
           Laptops
         </button>
-        <button onClick={() => setType("shirt")} className="box box1">
+        <button
+          style={{ boxShadow: style.shi && "0px 3px 5px yellow" }}
+          onClick={handleShirt}
+          className="box box1">
           Shirts
         </button>
       </div>
